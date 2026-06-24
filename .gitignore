@@ -1,0 +1,5 @@
+jdev2026_python_wheel_acharleroy.egg-info
+build 
+**/__pycache__/**
+.vscode
+dist

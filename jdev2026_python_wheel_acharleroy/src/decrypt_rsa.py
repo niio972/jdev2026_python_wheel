@@ -1,11 +1,9 @@
 import numpy as np
-
+from importlib.resources import files
 from .helpers import (
     break_rsa_with_primes,
     display_gui,
-    rsa_decrypt,
     rsa_decrypt_text,
-    rsa_encrypt,
     rsa_encrypt_text,
     show_text_gui,
 )
@@ -31,7 +29,8 @@ def run_decrypt_rsa():
     show_text_gui(str(c), title="Encrypted message", label="Encrypted message:")
 
     # Load the list of primes and break RSA to find d
-    primes = np.load("primes.npz").tolist()
+    data_path = files("jdev2026_python_wheel_acharleroy.src.data") / "primes.npz"
+    primes = np.load(data_path).tolist()
     d = break_rsa_with_primes(n, e, primes)
 
     # Decrypting the message
@@ -40,6 +39,9 @@ def run_decrypt_rsa():
         str(decrypted_message), title="Decrypted message", label="Decrypted message:"
     )
 
+def main():
+    run_decrypt_rsa()
+
 
 if __name__ == "__main__":
-    run_decrypt_rsa()
+    main()
