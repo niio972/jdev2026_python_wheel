@@ -1,7 +1,7 @@
 
 [project]
 name = "jdev2026-python-wheel-acharleroy"
-version = "0.2.0"
+version = "0.3.0"
 description = "Demo package wheel"
 authors = [{name="Arnaud"}]
 readme = "README.md"

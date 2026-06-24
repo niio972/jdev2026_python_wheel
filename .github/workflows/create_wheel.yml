@@ -3,7 +3,7 @@ name: Publish package
 
 on:
   push:
-    branches: [ master, working_example ]
+    branches: [ master, workshop_starting_point, working_example ]
     tags:
       - '*'
   pull_request:
